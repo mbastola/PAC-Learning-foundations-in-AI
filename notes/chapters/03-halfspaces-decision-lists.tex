@@ -1,0 +1,17 @@
+\section{Halfspaces, Perceptrons, and Decision Lists}
+
+The archive connects halfspaces, perceptrons, and VC dimension. A binary
+perceptron computes a linear threshold function:
+\[
+  h(x)=\mathbf{1}[w \cdot x + b \geq 0].
+\]
+
+In the course notes and final materials, this is used as the base case for
+neural-network VC-dimension arguments. The halfspace result is remembered here
+in its simple form: halfspaces in $\mathbb{R}^n$ have VC dimension $n+1$.
+
+The homework also studies decision lists. A decision list evaluates tests in
+order and returns the label attached to the first satisfied test, falling back
+to a default label. The code in \texttt{decision\_lists.py} implements only this
+evaluation model, enough to experiment with the class on Boolean inputs.
+

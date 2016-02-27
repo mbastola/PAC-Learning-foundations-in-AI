@@ -1,0 +1,20 @@
+\section{PAC Semantics and Resolution}
+
+The scribe and homework materials connect learning-theoretic approximation with
+logical entailment. Classical entailment requires a conclusion to hold in every
+model satisfying the premises. PAC semantics relaxes this: a rule may fail on a
+small probability mass under the data distribution.
+
+For a premise $p$ and conclusion $q$, the executable version in this repository
+checks the finite-distribution condition
+\[
+  \Pr_{x \sim \D}[p(x) \Rightarrow q(x)] \geq 1-\epsilon.
+\]
+
+The resolution material is represented just as a tiny propositional helper. A
+clause is a set of signed integers: $1$ means $x_1$, and $-1$ means $\neg x_1$.
+Resolving $\{x\} \cup A$ with $\{\neg x\} \cup B$ produces $A \cup B$.
+
+This keeps the logic side present without making the whole repository a logic
+programming project.
+

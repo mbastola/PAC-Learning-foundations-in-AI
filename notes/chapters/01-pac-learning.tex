@@ -1,0 +1,28 @@
+\section{PAC Learning}
+
+The first thread in the archive is the definition of PAC learning. A concept
+class $\C$ lives over an instance space $\X$. A learner sees labeled examples
+drawn from an unknown distribution $\D$ and returns a hypothesis with small
+true error.
+
+\begin{definition}[PAC learning]
+A concept class $\C$ is PAC learnable if there is an algorithm that, for
+accuracy $\epsilon$ and confidence $\delta$, uses polynomially many examples
+and returns a hypothesis $h$ such that
+\[
+  \Pr[\err_{\D}(h) \leq \epsilon] \geq 1-\delta.
+\]
+\end{definition}
+
+For a finite hypothesis class, the basic union-bound argument is the simplest
+executable result in the course. If the learner returns a hypothesis consistent
+with $m$ examples, then choosing
+\[
+  m \geq \frac{\log |\Hh| + \log(1/\delta)}{\epsilon}
+\]
+makes it unlikely that a bad hypothesis survives all samples.
+
+The code in \texttt{src/pac\_learning/bounds.py} keeps this bound explicit. It
+does not replace the proof; it gives a concrete way to inspect the dependence
+on $|\Hh|$, $\epsilon$, and $\delta$.
+

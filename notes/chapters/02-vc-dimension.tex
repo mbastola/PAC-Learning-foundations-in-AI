@@ -1,0 +1,25 @@
+\section{VC Dimension}
+
+The homework and final materials repeatedly use shattering, growth functions,
+and VC dimension to move from finite hypothesis classes to infinite classes.
+
+\begin{definition}[Shattering]
+A concept class $\C$ shatters a finite set $S \subseteq \X$ if every binary
+labeling of $S$ is realized by some concept in $\C$.
+\end{definition}
+
+\begin{definition}[VC dimension]
+The VC dimension of $\C$, written $\vc(\C)$, is the largest size of a finite set
+that $\C$ shatters.
+\end{definition}
+
+The growth function counts how many labelings a class can realize on a sample
+of size $m$. Sauer's lemma is the bridge between finite VC dimension and
+generalization: when $\vc(\C)=d$, the growth function is at most
+\[
+  \sum_{i=0}^{d} \binom{m}{i}.
+\]
+
+The repository code uses this only on small finite examples. The goal is to make
+terms like ``shattered'' and ``growth function'' directly checkable, not to
+build a symbolic theorem prover for the whole course.
