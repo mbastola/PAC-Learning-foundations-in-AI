@@ -28,6 +28,14 @@ Here we rewrite the course ideas in Python:
 - PAC semantics, classical entailment, and a small resolution example.
 - The final-project thread on VC dimension of neural networks.
 
+## Formalization
+
+- `coq/` contains a minimal Coq sketch for finite agreement on examples.
+- `prolog/` contains a tiny logic-programming sketch for entailment and
+  resolution-style clauses.
+
+The formal/ files are here to show where mechanically checked fragments belong.
+
 ## Run
 
 Run examples:
